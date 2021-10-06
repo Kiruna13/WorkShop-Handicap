@@ -1,20 +1,60 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello AppController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<!DOCTYPE html>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WorkShop</title>
+    <link rel="stylesheet" href="app/style.css" />
+  </head>
+  <body>
+    <div class="mobile-container">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/Geoffrey/symfony_app_myWeekly/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/Geoffrey/symfony_app_myWeekly/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a></code></li>
-    </ul>
-</div>
+      <!-- DIV HEADER -->
+      <!-- <div class="top-bloc">
+        <h1>WorkShop</h1>
+      </div> -->
+
+      <!-- Image Centrale -->
+      <div class="tacheContainer" id="tacheContainer">
+
+      </div>
+
+
+
+      <!-- Boutons de navigations du bas de page -->
+      <nav class="bottom-nav">
+
+        <a  class="menu-item" id="cross">
+          <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" alt="non validé"/>
+
+        </a>
+
+        <a  class="menu-item" id="question">
+          <img src="https://img.icons8.com/material-outlined/24/000000/question-mark.png" alt="problème"/>
+
+        </a>
+
+        <a  class="menu-item" id="check">
+          <img src="https://img.icons8.com/material-outlined/24/000000/checkmark--v1.png" alt="valider"/>
+
+
+        </a>
+
+      </nav>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="app/script.js"></script>
+
+  </body>
+
+</html>
+
+
 {% endblock %}
