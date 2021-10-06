@@ -15,5 +15,4 @@ menuItems.forEach(item => {
     currentTask.style.animationName = "away";
     containTask.innerHTML = "<div class='centered' id='tache'></div>";
   })
-
 })
