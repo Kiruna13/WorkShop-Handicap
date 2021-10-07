@@ -24,7 +24,7 @@ class FormController extends AbstractController
     $form->handleRequest($request);
     if ($form->isSubmitted() && $form->isValid()){
 
-        $this->addFlash('success', 'Patient ajouté avec succès' );
+        $this->addFlash('success', 'Utilisateur ajouté avec succès' );
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($user);
         $entityManager->flush();

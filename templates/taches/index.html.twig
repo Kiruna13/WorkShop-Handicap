@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block title %}Tâches{% endblock %}
 
+
 {% block body %}
-    {{ form(formTache) }}
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
 {% endblock %}
