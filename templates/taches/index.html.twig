@@ -1,10 +1,145 @@
-{% extends 'base.html.twig' %}
-{% block title %}Tâches{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Dashio - Bootstrap Admin Template</title>
 
+    <!-- Favicons -->
+    <link href="template/img/favicon.png" rel="icon">
+    <link href="template/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <!-- Bootstrap core CSS -->
+    <link href="template/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="template/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="template/lib/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="template/css/style.css" rel="stylesheet">
+    <link href="template/css/style-responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+      Template Name: Dashio
+      Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+      Author: TemplateMag.com
+      License: https://templatemag.com/license/
+    ======================================================= -->
+</head>
+{% endblock %}
 {% block body %}
-    {{ form_start(form) }}
-    {{ form_rest(form) }}
-    <button type="submit">Enregistrer</button>
-    {{ form_end(form) }}
+<body>
+<section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>DASH<span>BOARD</span></b></a>
+        <!--logo end-->
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <p class="centered"><a href="profile.html"><img src="template/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+                <h5 class="centered">Jean Dupont</h5>
+                <li>
+                    <a href="/taches">
+                        <i class="fa fa-book"></i>
+                        <span>Emploi du temps</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/mobile">
+                        <i class="fa fa-th"></i>
+                        <span>Application Mobile</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div style="display: flex; margin-left: auto; margin-right: auto; width:60vw; justify-content: space-between; flex-direction: column; margin-top: 20vw;" >
+                {{ form_start(form) }}
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                    <span style="width:20vw;">
+                        {{ form_label(form.Nom) }}
+                        {{ form_widget(form.Nom) }}
+                    </span>
+                    <span style="width:20vw;">
+                        {{ form_label(form.Description) }}
+                        {{ form_widget(form.Description) }}
+                    </span>
+
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+                    <span style="width:20vw;">
+                        {{ form_label(form.Temps) }}
+                        {{ form_widget(form.Temps) }}
+                    </span>
+                    <span style="width:20vw;">
+                        {{ form_label(form.images) }}
+                        {{ form_widget(form.images) }}
+                    </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin-top:2vw; margin-bottom: 10vw;">
+
+                    <button class="btn btn-primary" type="submit">Enregistrer</button>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+
+            <!-- /row -->
+        </section>
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>
+                &copy; Copyrights <strong>Humanity Planner</strong>. All Rights Reserved
+            </p>
+            <a href="index.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="template/lib/jquery/jquery.min.js"></script>
+
+<script src="template/lib/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
 {% endblock %}

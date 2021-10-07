@@ -1,0 +1,63 @@
+{% block body %}
+    <!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>WorkShop</title>
+        <link rel="stylesheet" href="app/style.css" />
+    </head>
+    <body>
+    <a href="/taches">
+        <input type="button" value="retour" >
+    </a>
+
+    <div class="mobile-container">
+
+        <!-- DIV HEADER -->
+        <div class="top-bloc">
+            <img src="app/logo.gif" style="width:200px;">
+        </div>
+
+        <!-- Image Centrale -->
+        <div class="tacheContainer" id="tacheContainer">
+
+        </div>
+
+
+
+        <!-- Boutons de navigations du bas de page -->
+        <nav class="bottom-nav">
+
+            <a  class="menu-item" id="cross">
+                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" alt="non validé"/>
+
+            </a>
+
+            <a  class="menu-item" id="question">
+                <img src="https://img.icons8.com/material-outlined/24/000000/question-mark.png" alt="problème"/>
+
+            </a>
+
+            <a  class="menu-item" id="check">
+                <img src="https://img.icons8.com/material-outlined/24/000000/checkmark--v1.png" alt="valider"/>
+
+
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="app/script.js"></script>
+
+    </body>
+
+    </html>
+
+
+{% endblock %}
